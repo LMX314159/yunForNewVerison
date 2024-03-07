@@ -102,7 +102,7 @@ def default_post(router, data, headers=None, m_host=None, isBytes=False):
             'Connection': 'Keep-Alive',
             'Accept-Encoding': 'gzip',
             'User-Agent': 'okhttp/3.12.0',
-            'utc'= time.time(),
+            'utc':str(int(time.time())),
             'uuid': conf.get("User", "uuid"),
             'sign': conf.get("User", "sign")
         }
